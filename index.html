@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Goal Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./calender.css">
+  <link rel="stylesheet" href="./mind.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jsmind@0.4.3/jsmind.min.js"></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="logo">Goal Tracker</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#goals">Goals</a></li>
+      <li><a href="#calendar">Calendar</a></li>
+    </ul>
+  </div>
+
+  <div class="page-wrapper">
+    <header>
+      <h1>Daily Goal Tracker</h1>
+    </header>
+
+    <section id="home">
+      <h2>Welcome</h2>
+      <p>Track your goals, stay organized, and achieve greatness!</p>
+    </section>
+  <div class="page-wrapper">
+    <header id="head">
+      <center><h1 id="style">Goal Tracker</h1></center>
+    </header>
+
+    <div id="head2"></div>
+
+    <main>
+      <section class="form-container">
+        <div class="form-section">
+          <h2>Goal</h2>
+          <textarea id="goal" placeholder="Enter your goal here"></textarea>
+        </div>
+        <div class="form-section">
+          <h2>Goal Purpose</h2>
+          <textarea id="goalPurpose" placeholder="Enter the purpose of your goal here"></textarea>
+        </div>
+      </section>
+
+      <div class="button-container">
+        <button id="addGoalButton">Add Goal</button>
+      </div>
+
+      <div id="head2"></div>
+
+      <section class="goals-list-container">
+        <h2>Goals List</h2>
+        <ul id="goalsList"></ul>
+      </section>
+
+      <div id="head2"></div>
+
+      <section class="goals-list-container">
+        <h2>Calendar</h2>
+      </section>
+
+      <section id="container" aria-label="Calendar Navigation">
+        <div id="header">
+          <div id="monthDisplay" aria-live="polite"></div>
+          <div>
+            <button id="backButton" aria-label="Previous Month">Prev</button>
+            <button id="nextButton" aria-label="Next Month">Next</button>
+          </div>
+        </div>
+
+        <div id="weekdays">
+          <div>Sunday</div>
+          <div>Monday</div>
+          <div>Tuesday</div>
+          <div>Wednesday</div>
+          <div>Thursday</div>
+          <div>Friday</div>
+          <div>Saturday</div>
+        </div>
+
+        <div id="calendar"></div>
+      </section>
+
+      <section id="newEventModal" aria-labelledby="newEventModalHeading">
+        <h2 id="newEventModalHeading">New Event</h2>
+        <input id="eventTitleInput" placeholder="Event Title" aria-label="Event Title" />
+        <button id="saveButton">Save</button>
+        <button id="cancelButton">Cancel</button>
+      </section>
+
+      <section id="deleteEventModal" aria-labelledby="deleteEventModalHeading">
+        <h2 id="deleteEventModalHeading">Event</h2>
+        <p id="eventText"></p>
+        <button id="deleteButton">Delete</button>
+        <button id="closeButton">Close</button>
+      </section>
+
+      <div id="modalBackDrop"></div>
+
+      <section class="goals-list-container">
+        <h2>Mind-Map Creator</h2>
+        <div class="goal-tracker-container">
+          <!-- Your existing goal tracker elements here -->
+          
+          <!-- Button for launching the Mind Map creator -->
+          <div class="button-containers">
+            <button id="startMindMap">Start Mind Map</button>
+          </div>
+          
+          <!-- Mind Map Container (Initially Hidden) -->
+          <div id="mindMapContainer" class="mind-map-container">
+            <h3>Mind Map Creator</h3>
+            <div id="mindMapCanvas"></div> <!-- This is where the mind map will be rendered -->
+            <button id="addNode">Add Node</button>
+            <button id="deleteNode">Delete Node</button>
+            <button id="addLabel">Edit Node</button>
+          </div>
+        </div>
+      </section>
+      
+      
+
+      <script src="./calendar.js"></script>
+      <script src="./mind.js"></script>
+    </main>
+
+    <footer>
+      <p>© 2025 Daily Goal Tracker</p>
+    </footer>
+  </div>
+</body>
+</html>
